@@ -1,4 +1,4 @@
-# Importing the libraries
+# Importando bibliotecas
 import json
 import hashlib
 import datetime
@@ -11,7 +11,7 @@ class Blockchain:
     def __init__(self):
         self.cadeia = []
 
-    def criar_bloco(self, conteudo='test'):
+    def criar_bloco(self, conteudo='teste'):
         bloco = {'indice': len(self.cadeia) + 1,
                  'data_hora': str(datetime.datetime.now()),
                  'conteudo': str(conteudo),
@@ -31,6 +31,5 @@ class Blockchain:
 
 blockchain = Blockchain()
 blockchain.criar_bloco()
-for i in range(10):
-    blockchain.criar_bloco('kkk')
+blockchain.criar_bloco('Sucesso!')
 pprint(blockchain.cadeia)
